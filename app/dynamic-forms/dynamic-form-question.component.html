@@ -1,0 +1,20 @@
+<div [formGroup]="form" class="form-group">
+  <label [attr.for]="question.key" [class.required]="question.required">{{question.label}}</label>
+
+  <div [ngSwitch]="question.controlType">
+
+    <input *ngSwitchCase="'textbox'" [formControlName]="question.key" [id]="question.key" [type]="question.type" class="form-control">
+
+    <select [id]="question.key" *ngSwitchCase="'dropdown'" [formControlName]="question.key" class="form-control">
+      <option value=""> -- Select -- </option>
+      <option *ngFor="let opt of question.options" [value]="opt.key">{{opt.value}}</option>
+    </select>
+
+	<div *ngSwitchCase="'radio'">
+	  <label *ngFor="let opt of question.options" class='radio-inline'>
+	    <input [value]="opt.key" type="radio" formControlName="gender"  id="option1" autocomplete="off" checked> {{opt.value}}
+	  </label>
+	</div>
+
+  </div>
+</div>
