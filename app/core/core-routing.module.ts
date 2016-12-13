@@ -6,6 +6,9 @@ import { HomeComponent }    from '../home/home.component';
 import { DemoFormModule }    from '../demo-form/demo-form.module';
 import { DemoFormComponent }    from '../demo-form/demo-form.component';
 
+import { DemoTimeNowModule }    from '../demo-timenow/demo-timenow.module';
+import { DemoTimeNowComponent }    from '../demo-timenow/demo-timenow.component';
+
 const coreRoutes: Routes = [
   {
     path: '',
@@ -18,6 +21,10 @@ const coreRoutes: Routes = [
       {
         path: 'demo-form',
         component: DemoFormComponent
+      },
+      {
+        path: 'demo-timenow',
+        component: DemoTimeNowComponent
       }
     ]
   }
@@ -34,7 +41,8 @@ const coreRoutes: Routes = [
   ],
   exports: [
     RouterModule,
-    DemoFormModule
+    DemoFormModule,
+    DemoTimeNowModule
   ]
 })
 export class CoreRoutingModule { }
