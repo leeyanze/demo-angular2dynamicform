@@ -9,6 +9,9 @@ import { DemoFormComponent }    from '../demo-form/demo-form.component';
 import { DemoTimeNowModule }    from '../demo-timenow/demo-timenow.module';
 import { DemoTimeNowComponent }    from '../demo-timenow/demo-timenow.component';
 
+import { DemoChartsModule }    from '../demo-charts/demo-charts.module';
+import { DemoChartsComponent }    from '../demo-charts/demo-charts.component';
+
 const coreRoutes: Routes = [
   {
     path: '',
@@ -25,6 +28,10 @@ const coreRoutes: Routes = [
       {
         path: 'demo-timenow',
         component: DemoTimeNowComponent
+      },
+      {
+        path: 'demo-charts',
+        component: DemoChartsComponent
       }
     ]
   }
@@ -42,7 +49,8 @@ const coreRoutes: Routes = [
   exports: [
     RouterModule,
     DemoFormModule,
-    DemoTimeNowModule
+    DemoTimeNowModule,
+    DemoChartsModule
   ]
 })
 export class CoreRoutingModule { }

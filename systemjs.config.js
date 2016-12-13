@@ -25,7 +25,11 @@
 
       // other libraries
       'rxjs':                      'npm:rxjs',
-      'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js'
+      'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
+
+      'angular2-highcharts': 'npm:angular2-highcharts',
+      // This mapping is for loading Highcharts static API and Highcharts modules
+      'highcharts': 'npm:highcharts',
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
@@ -34,6 +38,17 @@
         defaultExtension: 'js'
       },
       rxjs: {
+        defaultExtension: 'js'
+      },
+      'angular2-highcharts': {
+        main: './index.js',
+        defaultExtension: 'js'
+      },
+      'highcharts': {
+        // NOTE: You should set './highcharts.src.js' here
+        // if you are not going to use <chart type="StockChart"
+        main: './highstock.src.js',
+
         defaultExtension: 'js'
       }
     }
