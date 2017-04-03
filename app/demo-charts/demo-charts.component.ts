@@ -26,3 +26,4 @@ export class DemoChartsComponent {
         this.chart = chartInstance;
     }
 }
+
